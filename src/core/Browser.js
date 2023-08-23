@@ -49,7 +49,7 @@ const mac = navigator.platform.startsWith('Mac');
 const linux = navigator.platform.startsWith('Linux');
 
 function userAgentContains(str) {
-	return navigator.userAgent.toLowerCase().includes(str);
+	return Object.keys(navigator).includes('userAgent') && navigator.userAgent.toLowerCase().includes(str);
 }
 
 
